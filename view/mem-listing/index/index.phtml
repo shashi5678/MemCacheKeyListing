@@ -1,0 +1,46 @@
+
+<script type="text/javascript">
+<!--
+$(document).ready(function() {
+    $('body').on('click', '.myselector', function(e) {
+        var key =  $(this).attr('key');
+
+        var confirmMsg = confirm("Are you sure, You want to flush this key!!! ");
+        if (confirmMsg == true) {
+      	  var f = document.createElement('form'); 
+          f.style.display = 'none'; 
+          this.parentNode.appendChild(f); 
+          f.method = 'post'; 
+          f.action = $(this).attr("url"); 
+          var m = document.createElement('input'); 
+          m.setAttribute('type', 'hidden'); 
+          m.setAttribute('name', 'key'); 
+          m.setAttribute('value', key); 
+          f.appendChild(m);
+          f.submit();
+        } 
+
+        return false;
+       
+    });
+});
+
+//-->
+</script>
+<table class="tGrid" >
+  <tr>
+    <th>Sr No</th>
+    <th>Mem Keys</th>
+    <th>Option</th>
+  </tr>
+<?php 
+$srNo =1;
+foreach($this->memKeys as $val){
+ ?>
+  <tr>
+    <td><?php echo $srNo++ ?></td>
+    <td><?php echo $val; ?></td>
+     <td> <a href ='javascript:void(0)' key='<?php echo $val; ?>' class="myselector" url ='/mem/delete'> Flush </a> </td>
+  </tr>
+<?php } ?>
+</table>
