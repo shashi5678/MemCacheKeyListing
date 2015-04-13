@@ -1,6 +1,4 @@
-
-{
-   "name": "shashi-singh/memcachekeylisting",
+{  "name": "shashi-singh/memcachekeylisting",
    "description": "Module to list memcached keys and provide functinality to flush key one by one",
    "type": "library",
    "keywords": [
@@ -27,4 +25,4 @@
            "./Module.php"
        ]
    }
-
+}
