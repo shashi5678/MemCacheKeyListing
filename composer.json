@@ -1,0 +1,30 @@
+
+{
+   "name": "shashi-singh/memcachekeylisting",
+   "description": "Module to list memcached keys and provide functinality to flush key one by one",
+   "type": "library",
+   "keywords": [
+       "zf2",
+       "Memcache",
+       "memcached",
+       "cached key listing",
+       "Flush cached Keys",
+       "Delete cached keys"
+       	
+   ],
+   "homepage": "https://github.com/tarun-singhal/AppLogger",
+   "authors": [
+       {
+           "name": "Shashi Kant Singh",
+           "email": "shashi5678@gmail.com"
+       }
+   ],
+   "require": {
+       "php": ">=5.3"
+   },
+   "autoload": {
+       "classmap": [
+           "./Module.php"
+       ]
+   }
+
